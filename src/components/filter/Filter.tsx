@@ -1,4 +1,9 @@
-const Filter = (props: { products: any; filterProducts: any }) => {
+import { Product } from "../../types/ProductType";
+
+const Filter = (props: {
+  products: Product[];
+  filterProducts: (event: Product[]) => void;
+}) => {
   const { products, filterProducts } = props;
 
   const filter = (e: { target: { value: any } }) => {

@@ -53,22 +53,24 @@ const ProductList = () => {
     pagination(results);
   };
 
-  return (
-      products ? <div className="container">
-          <Filter
-              products={products}
-              filterProducts={(results: Product[]) => onFilter(results)}
-          />
-          <Products
-              onDetail={(item: Product) => onDetail(item)}
-              tempProducts={tempProducts}
-          />
-          <Pagination
-              pageCount={pageCount}
-              selectedPage={selectedPage}
-              onPaginationChange={(page: number) => onPaginationChange(page)}
-          />
-        </div> : <div className="text-center">Loading...</div>
+  return products ? (
+    <div className="container">
+      <Filter
+        products={products}
+        filterProducts={(results: Product[]) => onFilter(results)}
+      />
+      <Products
+        onDetail={(item: Product) => onDetail(item)}
+        tempProducts={tempProducts!}
+      />
+      <Pagination
+        pageCount={pageCount!}
+        selectedPage={selectedPage}
+        onPaginationChange={(page: number) => onPaginationChange(page)}
+      />
+    </div>
+  ) : (
+    <div className="text-center">Loading...</div>
   );
 };
 

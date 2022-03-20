@@ -1,8 +1,11 @@
 import Card from "../productCard/ProductCard";
 import { Product } from "../../types/ProductType";
-import {Key} from "react";
+import { Key } from "react";
 
-const Products = (props: { tempProducts: any; onDetail: any }) => {
+const Products = (props: {
+  tempProducts: Product[];
+  onDetail: (event: Product) => void;
+}) => {
   const { tempProducts, onDetail } = props;
 
   return (

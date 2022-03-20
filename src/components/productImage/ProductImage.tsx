@@ -1,11 +1,11 @@
 import { Product } from "../../types/ProductType";
 import "./ProductImage.sass";
-
+import { ChangeEvent } from "react";
 
 const ProductImage = (props: {
   selectedImage: string;
   selectedProducts: Product;
-  onSelectedImage: any;
+  onSelectedImage: (event: string) => void;
 }) => {
   const { selectedImage, selectedProducts, onSelectedImage } = props;
 

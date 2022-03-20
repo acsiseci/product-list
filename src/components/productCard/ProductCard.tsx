@@ -1,7 +1,10 @@
 import "./ProductCard.sass";
 import { Product } from "../../types/ProductType";
 
-const ProductCard = (props: { item: Product; onDetail: any; }) => {
+const ProductCard = (props: {
+  item: Product;
+  onDetail: (event: Product) => void;
+}) => {
   const { item, onDetail } = props;
 
   return (

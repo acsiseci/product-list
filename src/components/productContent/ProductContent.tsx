@@ -1,10 +1,14 @@
 import { Option, Product, Variant } from "../../types/ProductType";
 import "./ProductContent.sass";
+import { ChangeEvent } from "react";
 
 const ProductContent = (props: {
   selectedVariant: Variant;
   selectedProducts: Product;
-  onSelectVariant: any;
+  onSelectVariant: (
+    event: ChangeEvent<HTMLSelectElement>,
+    option: "option1" | "option2" | "option3"
+  ) => void;
 }) => {
   const { selectedVariant, selectedProducts, onSelectVariant } = props;
 

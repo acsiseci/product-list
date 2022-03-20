@@ -21,7 +21,7 @@ export interface Product {
   options: Option[];
   images: Image[];
   image: Image;
-  _min_price:number
+  _min_price: number;
 }
 
 export interface Variant {
@@ -74,6 +74,3 @@ export interface Image {
   variant_ids: any[];
   admin_graphql_api_id: string;
 }
-
-
-

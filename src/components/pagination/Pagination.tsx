@@ -1,9 +1,9 @@
 import "./Pagination.sass";
 
 const Pagination = (props: {
-  pageCount: any;
-  selectedPage: any;
-  onPaginationChange: any;
+  pageCount: number;
+  selectedPage: number;
+  onPaginationChange: (event: number) => void;
 }) => {
   const { pageCount, selectedPage, onPaginationChange } = props;
 
